@@ -890,7 +890,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"crmID\": \"f3e868d6-b238-eb11-a813-000d3ab2928c\",\n    \"isMasterAccount\": true,\n    \"invoiceAddress\": {\n        \"legalName\": \"Katerblau\",\n        \"address\": {\n            \"street\": \"Bremer Str. 1\",\n            \"zip\": \"28199\",\n            \"city\": \"Bremen\",\n            \"country\": \"DE\"\n        }\n    },\n    \"number\": \"1110001\",\n    \"name\": \"Katerblau\",\n    \"legalName\": \"Katerblau\",\n    \"address\": {\n        \"street\": \"Bremer Str. 1\",\n        \"zip\": \"28199\",\n        \"city\": \"Bremen\",\n        \"country\": \"DE\"\n    },\n    \"isActive\": true,\n    \"marketingSystem\": \"763570000\",\n    \"hasActiveWhiteListing\": false,\n    \"keyAccountConfig\": {\n        \"hasInspirations\": true,\n        \"hasSolutions\": true\n    },\n    \"orderConfig\": {\n        \"hasOrderLock\": false\n    },\n    \"taxNumber\": \"123/456/78111111\"\n}"
+					"raw": "{\n   \"crmID\":\"89c34b6b-788d-e711-80e8-3863bb351333\",\n   \"isMasterAccount\":true,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"zip\":\"18609\",\n         \"city\":\"Ostseebad Binz\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"number\":\"2000005\",\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
 					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
@@ -1836,9 +1836,16 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 201\", function () {\r",
-							"    pm.response.to.have.status(201);\r",
-							"});"
+							"pm.test(\"Status code is 422\", function () {\r",
+							"    pm.response.to.have.status(422);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"pm.test(\"Error Code Object is indeed 16-10: Validierung fehlgeschlagen\", function () {\r",
+							"    let jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.errorCode).to.be.equal('016-99');\r",
+							"});\r",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -1887,7 +1894,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"changes\": [\n        {\n            \"masterBusinessUnit\": \"68bf7c7d-f717-e911-a96e-000d3ab42ba4\",\n            \"assignedBusinessUnits\": [\n                \"602fa0b4-4a18-eb11-a813-000d3ab297a5\",\n                \"943eb6e8-d715-eb11-a813-000d3ab29c25\",\n                \"5261d4f7-3a71-eb11-a812-000d3adaf248\",\n                \"48ac71f0-3971-eb11-a812-000d3adaf248\",\n                \"d8ca99ec-be33-eb11-a813-000d3ab29c25\",\n                \"056d5639-b333-ea11-a813-000d3ab2928c\",\n                \"dbf45ffd-43e8-ea11-a817-000d3ab2928c\"\n            ],\n            \"assignedCustomerAdmin\": \"f5bf8c5a-fc17-e911-a96e-000d3ab42ba4\"\n        }\n    ]\n}"
+					"raw": "{\n    \"changes\": [\n        {\n            \"masterBusinessUnit\": \"5a0e1ebb-04a0-ea11-a812-000d3ab2928c\",\n            \"assignedBusinessUnits\": [\n                \"566e48f3-04a0-ea11-a812-000d3ab2928c\",\n                \"76749488-04a0-ea11-a812-000d3ab2928c\"\n            ],\n            \"assignedCustomerAdmin\": \"3e78947e-25aa-ea11-a812-000d3ab297a5\"\n        }\n    ]\n}"
 				},
 				"url": {
 					"raw": "{{baseUrl}}/ecb-api/business-unit-hierarchy-import",
@@ -2030,6 +2037,10 @@
 		{
 			"key": "sap_merchant1",
 			"value": "881119"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://zed-stage.spryker.gastivo-hosting.de\n"
 		}
 	]
 }
