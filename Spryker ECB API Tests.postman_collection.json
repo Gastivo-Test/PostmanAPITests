@@ -40,6 +40,9 @@
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
 			"request": {
 				"auth": {
 					"type": "basic",
@@ -80,9 +83,13 @@
 					"raw": "{\n    \"crmID\": \"{{crm_merchant1}}\",\n    \"number\": \"{{sap_merchant1}}\",\n    \"name\": \"GTM QA Lieferant\",\n    \"legalName\": \"GTM QA - Lieferant\",\n    \"address\": {\n        \"street\": \"An der Elizabethwiese 7\",\n        \"zip\": \"18055\",\n        \"city\": \"Rostock\",\n        \"country\": \"DE\"\n    },\n    \"isActive\": true,\n    \"email\": \"peter.wilken@teambusinessit.de\",\n    \"websiteUrl\": \"https://EineWebsite\",\n    \"logoUrl\": \"https://shop.gastivo.de/extern/Stage/881119_12345uniquename.jpg\",\n    \"dataProtectionWebsiteUrl\": \"https://www.faz.net/aktuell/\",\n    \"termsAndConditionsWebsiteUrl\": \"https://www.faz.net/aktuell/\",\n    \"branding1\": \"GTM FF1 - Branding 1\",\n    \"branding2\": \"GTM FF1 - Branding 2\",\n    \"branding3\": \"GTM FF1 - Branding 3\",\n    \"marketingSystem\": \"763570000\",\n    \"marketPlaceConfig\": {\n        \"isFullMerchantListingVisible\": false,\n        \"shopPublicVisible\": \"NEVER\",\n        \"productsPublicVisible\": \"NO_CUSTOMERS\",\n        \"pricesPublicVisible\": \"NEVER\",\n        \"shopLoginVisible\": \"ASSIGNED_CUSTOMERS\",\n        \"productsLoginVisible\": \"ASSIGNED_CUSTOMERS\",\n        \"pricesLoginVisible\": \"ASSIGNED_CUSTOMERS\"\n    },\n    \"orderConfig\": {\n        \"isCustomerNotificationTextCheckoutEnabled\": true,\n        \"isCheckoutMessageActive\": true,\n        \"checkoutInfoText\": \"Check-Out Hinweistext BRAND NEW 07_05_21\",\n        \"checkbox1Enabled\": true,\n        \"checkbox2Enabled\": true,\n        \"checkbox3Enabled\": true,\n        \"dropdown1Enabled\": true,\n        \"checkbox1Label\": \"Check-Out Checkbox 1 - Beschriftung\",\n        \"checkbox2Label\": \"Check-Out Checkbox 2 - Beschriftung // Änderung\",\n        \"checkbox3Label\": \"Check-Out Checkbox 3 - Beschriftung / / Änderung\",\n        \"dropdown1Label\": \"Check-Out Dropdown 1 - Beschriftung\",\n        \"dropdown1Options\": [\n            \"Check-Out Dropdown 1 - Optionen\",\n            \"\\nmehr Optionen\",\n            \" LETZTE Option\"\n        ],\n        \"deliveryWeekdays\": [],\n        \"nonDeliveryWeekdays\": [\n            \"MON\",\n            \"TUE\",\n            \"WED\",\n            \"THU\",\n            \"FRI\",\n            \"SAT\",\n            \"SUN\"\n        ],\n        \"orderConstraints\": {\n            \"monday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"tuesday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"wednesday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"18:00:00\"\n            },\n            \"thursday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"friday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"saturday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"sunday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            }\n        },\n        \"deliveryDatesProvider\": \"003\",\n        \"minimumOrderValue\": 111.0,\n        \"minimumOrderType\": \"NOT_ACTIVE\",\n        \"minimumOrderQuantity\": 100.0\n    }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/merchant-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/merchant-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -161,9 +168,13 @@
 					"raw": "{\n    \"crmID\": \"{{crm_merchant1}}\",\n    \"name\": \"GTM QA Lieferant\",\n    \"legalName\": \"GTM QA - Lieferant\",\n    \"address\": {\n        \"street\": \"An der Elizabethwiese 7\",\n        \"zip\": \"18055\",\n        \"city\": \"Rostock\",\n        \"country\": \"DE\"\n    },\n    \"isActive\": true,\n    \"email\": \"peter.wilken@teambusinessit.de\",\n    \"websiteUrl\": \"https://EineWebsite\",\n    \"logoUrl\": \"https://shop.gastivo.de/extern/Stage/881119_12345uniquename.jpg\",\n    \"dataProtectionWebsiteUrl\": \"https://www.faz.net/aktuell/\",\n    \"termsAndConditionsWebsiteUrl\": \"https://www.faz.net/aktuell/\",\n    \"branding1\": \"GTM FF1 - Branding 1\",\n    \"branding2\": \"GTM FF1 - Branding 2\",\n    \"branding3\": \"GTM FF1 - Branding 3\",\n    \"marketingSystem\": \"763570000\",\n    \"marketPlaceConfig\": {\n        \"isFullMerchantListingVisible\": false,\n        \"shopPublicVisible\": \"NEVER\",\n        \"productsPublicVisible\": \"NO_CUSTOMERS\",\n        \"pricesPublicVisible\": \"NEVER\",\n        \"shopLoginVisible\": \"ASSIGNED_CUSTOMERS\",\n        \"productsLoginVisible\": \"ASSIGNED_CUSTOMERS\",\n        \"pricesLoginVisible\": \"ASSIGNED_CUSTOMERS\"\n    },\n    \"orderConfig\": {\n        \"isCustomerNotificationTextCheckoutEnabled\": true,\n        \"isCheckoutMessageActive\": true,\n        \"checkoutInfoText\": \"Check-Out Hinweistext BRAND NEW 07_05_21\",\n        \"checkbox1Enabled\": true,\n        \"checkbox2Enabled\": true,\n        \"checkbox3Enabled\": true,\n        \"dropdown1Enabled\": true,\n        \"checkbox1Label\": \"Check-Out Checkbox 1 - Beschriftung\",\n        \"checkbox2Label\": \"Check-Out Checkbox 2 - Beschriftung // Änderung\",\n        \"checkbox3Label\": \"Check-Out Checkbox 3 - Beschriftung / / Änderung\",\n        \"dropdown1Label\": \"Check-Out Dropdown 1 - Beschriftung\",\n        \"dropdown1Options\": [\n            \"Check-Out Dropdown 1 - Optionen\",\n            \"\\nmehr Optionen\",\n            \" LETZTE Option\"\n        ],\n        \"deliveryWeekdays\": [],\n        \"nonDeliveryWeekdays\": [\n            \"MON\",\n            \"TUE\",\n            \"WED\",\n            \"THU\",\n            \"FRI\",\n            \"SAT\",\n            \"SUN\"\n        ],\n        \"orderConstraints\": {\n            \"monday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"tuesday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"wednesday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"18:00:00\"\n            },\n            \"thursday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"friday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"saturday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"sunday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            }\n        },\n        \"deliveryDatesProvider\": \"003\",\n        \"minimumOrderValue\": 111.0,\n        \"minimumOrderType\": \"NOT_ACTIVE\",\n        \"minimumOrderQuantity\": 100.0\n    }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/merchant-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/merchant-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -242,9 +253,13 @@
 					"raw": "{\n    \"crmID\": \"{{crm_merchant1}}\",\n    \"name\": \"GTM QA Lieferant\",\n    \"legalName\": \"GTM QA - Lieferant\",\n    \"address\": {\n        \"street\": \"An der Elizabethwiese 7\",\n        \"zip\": \"18055\",\n        \"city\": \"Rostock\",\n        \"country\": \"DE\"\n    },\n    \"isActive\": true,\n    \"email\": \"peter.wilken@teambusinessit.de\",\n    \"websiteUrl\": \"https://EineWebsite\",\n    \"logoUrl\": \"https://shop.gastivo.de/extern/Stage/881119_12345uniquename.jpg\",\n    \"dataProtectionWebsiteUrl\": \"https://www.faz.net/aktuell/\",\n    \"termsAndConditionsWebsiteUrl\": \"https://www.faz.net/aktuell/\",\n    \"branding1\": \"GTM FF1 - Branding 1\",\n    \"branding2\": \"GTM FF1 - Branding 2\",\n    \"branding3\": \"GTM FF1 - Branding 3\",\n    \"marketingSystem\": \"763570000\",\n    \"marketPlaceConfig\": {\n        \"isFullMerchantListingVisible\": false,\n        \"shopPublicVisible\": \"NEVER\",\n        \"productsPublicVisible\": \"NO_CUSTOMERS\",\n        \"pricesPublicVisible\": \"NEVER\",\n        \"shopLoginVisible\": \"ASSIGNED_CUSTOMERS\",\n        \"productsLoginVisible\": \"ASSIGNED_CUSTOMERS\",\n        \"pricesLoginVisible\": \"ASSIGNED_CUSTOMERS\"\n    },\n    \"orderConfig\": {\n        \"isCustomerNotificationTextCheckoutEnabled\": true,\n        \"isCheckoutMessageActive\": true,\n        \"checkoutInfoText\": \"Check-Out Hinweistext BRAND NEW 07_05_21\",\n        \"checkbox1Enabled\": true,\n        \"checkbox2Enabled\": true,\n        \"checkbox3Enabled\": true,\n        \"dropdown1Enabled\": true,\n        \"checkbox1Label\": \"Check-Out Checkbox 1 - Beschriftung\",\n        \"checkbox2Label\": \"Check-Out Checkbox 2 - Beschriftung // Änderung\",\n        \"checkbox3Label\": \"Check-Out Checkbox 3 - Beschriftung / / Änderung\",\n        \"dropdown1Label\": \"Check-Out Dropdown 1 - Beschriftung\",\n        \"dropdown1Options\": [\n            \"Check-Out Dropdown 1 - Optionen\",\n            \"\\nmehr Optionen\",\n            \" LETZTE Option\"\n        ],\n        \"deliveryWeekdays\": [],\n        \"nonDeliveryWeekdays\": [\n            \"MON\",\n            \"TUE\",\n            \"WED\",\n            \"THU\",\n            \"FRI\",\n            \"SAT\",\n            \"SUN\"\n        ],\n        \"orderConstraints\": {\n            \"monday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"tuesday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"wednesday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"18:00:00\"\n            },\n            \"thursday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"friday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"saturday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            },\n            \"sunday\": {\n                \"orderLeadDays\": 7,\n                \"orderEndTime\": \"14:00:00\"\n            }\n        },\n        \"deliveryDatesProvider\": \"003\",\n        \"minimumOrderValue\": 111.0,\n        \"minimumOrderType\": \"NOT_ACTIVE\",\n        \"minimumOrderQuantity\": 100.0\n    }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/merchant-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/merchant-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -326,9 +341,13 @@
 					"raw": "{\n   \"crmID\":\"89c34b6b-788d-e711-80e8-3863bb351333\",\n   \"parentCrmID\":\"0440ce9f-d1a9-e711-80ed-3863bb351d40\",\n   \"isMasterAccount\":false,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"zip\":\"18609\",\n         \"city\":\"Ostseebad Binz\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"number\":\"2000005\",\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -407,9 +426,13 @@
 					"raw": "{\n   \"crmID\":\"89c34b6b-788d-e711-80e8-3863bb351333\",\n   \"parentCrmID\":\"0440ce9f-d1a9-e711-80ed-3863bb351d40\",\n   \"isMasterAccount\":false,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"zip\":\"18609\",\n         \"city\":\"Ostseebad Binz\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"number\":\"2000005789\",\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -488,9 +511,13 @@
 					"raw": "{\n   \"parentCrmID\":\"0440ce9f-d1a9-e711-80ed-3863bb351d40\",\n   \"isMasterAccount\":false,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"zip\":\"18609\",\n         \"city\":\"Ostseebad Binz\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"number\":\"2000005\",\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -569,9 +596,13 @@
 					"raw": "{\n   \"crmID\":\"89c34b6b-788d-e711-80e8-3863bb351333\",\n   \"parentCrmID\":\"0440ce9f-d1a9-e711-80ed-3863bb351d40\",\n   \"isMasterAccount\":false,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"zip\":\"18609\",\n         \"city\":\"Ostseebad Binz\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -650,9 +681,13 @@
 					"raw": "{\n   \"crmID\":\"89c34b6b-788d-e711-80e8-3863bb351333\",\n   \"parentCrmID\":\"0440ce9f-d1a9-e711-80ed-3863bb351d40\",\n   \"isMasterAccount\":false,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"number\":\"2000005\",\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -731,9 +766,13 @@
 					"raw": "{\n   \"crmID\":\"89c34b6b-788d-e711-80e8-3863bb351333\",\n   \"isMasterAccount\":false,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"zip\":\"18609\",\n         \"city\":\"Ostseebad Binz\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"number\":\"2000005\",\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -812,9 +851,13 @@
 					"raw": "{\n    \"crmID\": \"f3e868d6-b238-eb11-a813-000d3ab2928c\",\n    \"parentCrmID\": \"7486a052-05a0-ea11-a812-000d3ab2aaaa\",\n    \"isMasterAccount\": false,\n    \"invoiceAddress\": {\n        \"legalName\": \"Katerblau\",\n        \"address\": {\n            \"street\": \"Bremer Str. 1\",\n            \"zip\": \"28199\",\n            \"city\": \"Bremen\",\n            \"country\": \"DE\"\n        }\n    },\n    \"number\": \"1110001\",\n    \"name\": \"Katerblau\",\n    \"legalName\": \"Katerblau\",\n    \"address\": {\n        \"street\": \"Bremer Str. 1\",\n        \"zip\": \"28199\",\n        \"city\": \"Bremen\",\n        \"country\": \"DE\"\n    },\n    \"isActive\": true,\n    \"marketingSystem\": \"763570000\",\n    \"hasActiveWhiteListing\": false,\n    \"keyAccountConfig\": {\n        \"hasInspirations\": true,\n        \"hasSolutions\": true\n    },\n    \"orderConfig\": {\n        \"hasOrderLock\": false\n    },\n    \"taxNumber\": \"123/456/78111111\"\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -893,9 +936,13 @@
 					"raw": "{\n   \"crmID\":\"89c34b6b-788d-e711-80e8-3863bb351333\",\n   \"isMasterAccount\":true,\n   \"invoiceAddress\":{\n      \"legalName\":\"Rechnungsadresse Braugasthaus Doldenmädel GmbH\",\n      \"address\":{\n         \"street\":\"Schillerstraße 5\",\n         \"zip\":\"18609\",\n         \"city\":\"Ostseebad Binz\",\n         \"country\":\"DE\"\n      }\n   },\n   \"orderConfig\": {\n            \"hasOrderLock\": false\n          },\n   \"number\":\"2000005\",\n   \"name\":\"Braugasthaus Doldenmädel GmbH\",\n   \"legalName\":\"Braugasthaus Doldenmädel GmbH\",\n   \"address\":{\n      \"street\":\"Schillerstraße 6\",\n      \"zip\":\"18609\",\n      \"city\":\"Ostseebad Binz\",\n      \"country\":\"DE\"\n   },\n   \"isActive\":false,\n   \"marketingSystem\":\"763570001\",\n   \"customerNumberMarketingSystem\":\"112236\",\n   \"hasActiveWhiteListing\": false,\n   \"additionalOrderConfirmationRecipients\":\"epsilonhmeyer@gmail.com;peter.wilken@teambusinessit.de\",\n   \"keyAccountConfig\":{\n      \"hasInspirations\":false,\n      \"hasSolutions\":false\n   }\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-business-unit-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-business-unit-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -960,9 +1007,13 @@
 					"raw": "{\r\n    \"crmID\": \"d57cf8e5-10d7-ea11-a813-000d3ab2928c\",\r\n    \"merchantCrmId\": \"6adf3696-6a9f-ea11-a811-000d3ab2a794\",\r\n    \"businessUnitCrmId\": \"7486a052-05a0-ea11-a812-000d3ab2928c\",\r\n    \"isActive\": true,\r\n    \"deliveryCycleInWeeks\": 1,\r\n    \"isMerchantBranding\": false,\r\n    \"merchantCustomerNumber\": \"123456789\",\r\n    \"priority\": 5,\r\n    \"modelRanking\": [],\r\n    \"isPricesVisible\": true,\r\n    \"isFullMerchantListingVisible\": true,\r\n    \"orderConfig\": {\r\n        \"minimumOrderValue\": 0,\r\n        \"minimumOrderInheritance\": \"DEACTIVATED\",\r\n        \"minimumOrderQuantity\": 0,\r\n        \"checkoutInfoTextInheritance\": \"DEACTIVATED\",\r\n        \"hasOrderLock\": false\r\n    },\r\n    \"deliveryWeekdays\": [\r\n        \"MON\",\r\n        \"TUE\",\r\n        \"WED\"\r\n    ],\r\n    \"nonDeliveryWeekdays\": []\r\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/merchant-relation-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/merchant-relation-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1032,9 +1083,13 @@
 					"raw": "{\r\n    \"crmID\": \"d57cf8e5-10d7-ea11-a813-000d3abaaaa\",\r\n    \"merchantCrmId\": \"6adf3696-6a9f-ea11-a811-000d3ab2a794\",\r\n    \"businessUnitCrmId\": \"7486a052-05a0-ea11-a812-000d3ab2928c\",\r\n    \"isActive\": true,\r\n    \"deliveryCycleInWeeks\": 1,\r\n    \"isMerchantBranding\": false,\r\n    \"merchantCustomerNumber\": \"123456789\",\r\n    \"priority\": 5,\r\n    \"modelRanking\": [],\r\n    \"isPricesVisible\": true,\r\n    \"isFullMerchantListingVisible\": true,\r\n    \"orderConfig\": {\r\n        \"minimumOrderValue\": 0,\r\n        \"minimumOrderInheritance\": \"DEACTIVATED\",\r\n        \"minimumOrderQuantity\": 0,\r\n        \"checkoutInfoTextInheritance\": \"DEACTIVATED\",\r\n        \"hasOrderLock\": false\r\n    },\r\n    \"deliveryWeekdays\": [\r\n        \"MON\",\r\n        \"TUE\",\r\n        \"WED\"\r\n    ],\r\n    \"nonDeliveryWeekdays\": []\r\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/merchant-relation-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/merchant-relation-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1104,9 +1159,13 @@
 					"raw": "{\r\n    \"crmID\": \"d57cf8e5-10d7-ea11-a813-000d3ab2928c\",\r\n    \"merchantCrmId\": \"6adf3696-6a9f-ea11-a811-000d3ab2a794\",\r\n    \"businessUnitCrmId\": \"7486a052-05a0-ea11-a812-000d3abaaaaa\",\r\n    \"isActive\": true,\r\n    \"deliveryCycleInWeeks\": 1,\r\n    \"isMerchantBranding\": false,\r\n    \"merchantCustomerNumber\": \"123456789\",\r\n    \"priority\": 5,\r\n    \"modelRanking\": [],\r\n    \"isPricesVisible\": true,\r\n    \"isFullMerchantListingVisible\": true,\r\n    \"orderConfig\": {\r\n        \"minimumOrderValue\": 0,\r\n        \"minimumOrderInheritance\": \"DEACTIVATED\",\r\n        \"minimumOrderQuantity\": 0,\r\n        \"checkoutInfoTextInheritance\": \"DEACTIVATED\",\r\n        \"hasOrderLock\": false\r\n    },\r\n    \"deliveryWeekdays\": [\r\n        \"MON\",\r\n        \"TUE\",\r\n        \"WED\"\r\n    ],\r\n    \"nonDeliveryWeekdays\": []\r\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/merchant-relation-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/merchant-relation-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1176,9 +1235,13 @@
 					"raw": "{\r\n    \"crmID\": \"d57cf8e5-10d7-ea11-a813-000d3ab2928c\",\r\n    \"merchantCrmId\": \"6adf3696-6a9f-ea11-a811-000d3ab2aaaa\",\r\n    \"businessUnitCrmId\": \"7486a052-05a0-ea11-a812-000d3ab2928c\",\r\n    \"isActive\": true,\r\n    \"deliveryCycleInWeeks\": 1,\r\n    \"isMerchantBranding\": false,\r\n    \"merchantCustomerNumber\": \"123456789\",\r\n    \"priority\": 5,\r\n    \"modelRanking\": [],\r\n    \"isPricesVisible\": true,\r\n    \"isFullMerchantListingVisible\": true,\r\n    \"orderConfig\": {\r\n        \"minimumOrderValue\": 0,\r\n        \"minimumOrderInheritance\": \"DEACTIVATED\",\r\n        \"minimumOrderQuantity\": 0,\r\n        \"checkoutInfoTextInheritance\": \"DEACTIVATED\",\r\n        \"hasOrderLock\": false\r\n    },\r\n    \"deliveryWeekdays\": [\r\n        \"MON\",\r\n        \"TUE\",\r\n        \"WED\"\r\n    ],\r\n    \"nonDeliveryWeekdays\": []\r\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/merchant-relation-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/merchant-relation-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1258,9 +1321,13 @@
 					"raw": "{\n    \"crmID\": \"13837796-1187-1111-7957-110737797777\",\n    \"firstName\": \"Aldo\",\n    \"lastName\": \"Raine\",\n    \"title\": \"Lt.\",\n    \"salutation\": \"VAR\",\n    \"email\": \"gasspy3@mail.de\",\n    \"isActive\": true\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/customer-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/customer-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1345,9 +1412,13 @@
 					"raw": "{\n    \"crmID\": \"13837796-1187-1111-7957-110737797777aaaaaaaa\",\n    \"firstName\": \"Aldo\",\n    \"lastName\": \"Raine\",\n    \"title\": \"Lt.\",\n    \"salutation\": \"VAR\",\n    \"email\": \"gasspy3@mail.de\",\n    \"isActive\": true\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/customer-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/customer-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1432,9 +1503,13 @@
 					"raw": "{\n    \"crmID\": \"13837796-1187-1111-7957-110737799999\",\n    \"firstName\": \"Aldo\",\n    \"lastName\": \"Raine\",\n    \"title\": \"Lt.\",\n    \"salutation\": \"VAR\",\n    \"email\": \"gasspy3@mail.de\",\n    \"isActive\": true\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/customer-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/customer-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1505,9 +1580,13 @@
 					"raw": "{\n    \"userCrmId\": \"13837796-1187-1111-7957-110737797777\",\n    \"businessUnitCrmId\": \"89c34b6b-788d-e711-80e8-3863bb351333\",\n    \n    \"assignedRoles\": [\n      \"BUSINESS_UNIT_MANAGER\"\n    ],\n    \"isPricesVisible\": true,\n    \"isActive\": true\n  }"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-user-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-user-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1583,9 +1662,13 @@
 					"raw": "{\n    \"userCrmId\": \"13837796-1187-1111-7957-110737797777aaaaaaa\",\n    \"businessUnitCrmId\": \"89c34b6b-788d-e711-80e8-3863bb351333\",\n    \n    \"assignedRoles\": [\n      \"BUSINESS_UNIT_MANAGER\"\n    ],\n    \"isPricesVisible\": true,\n    \"isActive\": true\n  }"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-user-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-user-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1661,9 +1744,13 @@
 					"raw": "{\n    \"userCrmId\": \"13837796-1187-1111-7957-110737797777\",\n    \"businessUnitCrmId\": \"89c34b6b-788d-e711-80e8-3863bb351333\",\n    \n\n    \"isPricesVisible\": true,\n    \"isActive\": true\n  }"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-user-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-user-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1739,9 +1826,13 @@
 					"raw": "{\n    \"userCrmId\": \"13837796-1187-1111-7957-110737797777\",\n    \"businessUnitCrmId\": \"89c34b6b-788d-e711-80e8-3863bb351333\",\n    \n    \"assignedRoles\": [\n      \"BUSINESS_UNIT_MANAGER\"\n    ],\n    \"isPricesVisible\": true,\n    \"isActive\": true\n  }"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-user-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-user-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1817,9 +1908,13 @@
 					"raw": "{\n    \"userCrmId\": \"13837796-1187-1111-7957-110737793333\",\n    \"businessUnitCrmId\": \"89c34b6b-788d-e711-80e8-3863bb351333\",\n    \n    \"assignedRoles\": [\n      \"BUSINESS_UNIT_MANAGER\"\n    ],\n    \"isPricesVisible\": true,\n    \"isActive\": true\n  }"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/company-user-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/company-user-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1897,9 +1992,13 @@
 					"raw": "{\n    \"changes\": [\n        {\n            \"masterBusinessUnit\": \"5a0e1ebb-04a0-ea11-a812-000d3ab2928c\",\n            \"assignedBusinessUnits\": [\n                \"566e48f3-04a0-ea11-a812-000d3ab2928c\",\n                \"76749488-04a0-ea11-a812-000d3ab2928c\"\n            ],\n            \"assignedCustomerAdmin\": \"3e78947e-25aa-ea11-a812-000d3ab297a5\"\n        }\n    ]\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/business-unit-hierarchy-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/business-unit-hierarchy-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
@@ -1977,9 +2076,13 @@
 					"raw": "{\n    \"changes\": [\n        {\n            \"masterBusinessUnit\": \"68bf7c7d-f717-e911-a96e-000d3ab42ba4\",\n            \"assignedBusinessUnits\": [\n                \"602fa0b4-4a18-eb11-a813-000d3ab297a5\",\n                \"943eb6e8-d715-eb11-a813-000d3ab29c25\",\n                \"5261d4f7-3a71-eb11-a812-000d3adaf248\",\n                \"48ac71f0-3971-eb11-a812-000d3adaf248\",\n                \"d8ca99ec-be33-eb11-a813-000d3ab29c25\",\n                \"056d5639-b333-ea11-a813-000d3ab2928c\",\n                \"dbf45ffd-43e8-ea11-a817-000d3ab2928c\"\n            ],\n            \"assignedCustomerAdmin\": \"f5bf8c5a-fc17-e911-a96e-000d6ct56ba4\"\n        }\n    ]\n}"
 				},
 				"url": {
-					"raw": "{{baseUrl}}/ecb-api/business-unit-hierarchy-import",
+					"raw": "https://zed-stage.spryker.gastivo-hosting.de/ecb-api/business-unit-hierarchy-import",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"zed-stage",
+						"spryker",
+						"gastivo-hosting",
+						"de"
 					],
 					"path": [
 						"ecb-api",
