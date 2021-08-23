@@ -31,10 +31,7 @@
 				}
 			],
 			"protocolProfileBehavior": {
-				"disabledSystemHeaders": {
-					"content-length": true,
-					"host": true
-				}
+				"disabledSystemHeaders": {}
 			},
 			"request": {
 				"auth": {
@@ -131,23 +128,19 @@
 	"variable": [
 		{
 			"key": "requiredVariables",
-			"value": "crmId, shortName",
-			"disabled": true
+			"value": "crmId, shortName"
 		},
 		{
 			"key": "crm_merchant1",
-			"value": "6adf3696-6a9f-ea11-a811-000d3ab2a794",
-			"disabled": true
+			"value": "6adf3696-6a9f-ea11-a811-000d3ab2a794"
 		},
 		{
 			"key": "sap_merchant1",
-			"value": "881119",
-			"disabled": true
+			"value": "881119"
 		},
 		{
 			"key": "baseUrl",
-			"value": "https://zed-stage.spryker.gastivo-hosting.de\n",
-			"disabled": true
+			"value": "https://zed-stage.spryker.gastivo-hosting.de\n"
 		}
 	]
 }
